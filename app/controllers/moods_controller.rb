@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 class MoodsController < ProtectedController
-  before_action :set_mood, only: [:show]
+  before_action :set_mood, only: [:show, :update, :destroy]
 end
 
 # GET /moods
 def index
-  @moods = current_user.moods
+  @moods = Mood.all
+  # @moods = current_user.moods
   render json: @moods
 end
 
@@ -17,7 +18,8 @@ end
 
 # POST /moods
 def create
-  @mood = current_user.mood.build(mood_params)
+  @mood = Mood.new(mood_params)
+  # @mood = current_user.mood.build(mood_params)
 
   if @mood.save
     render json: @mood, status: :created, location: @mood
