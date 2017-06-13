@@ -1,5 +1,5 @@
 class Mood < ApplicationRecord
   belongs_to :user
 
-  validates :description
+  validates :description, presence: true
 end
