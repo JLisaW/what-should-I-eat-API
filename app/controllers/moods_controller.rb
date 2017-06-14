@@ -42,13 +42,13 @@ class MoodsController < ProtectedController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_mood
+  def set_mood
       @mood = Mood.find(params[:id])
-      @mood = current_user.cards.find(params[:id])
-    end
+      @mood = current_user.moods.find(params[:id])
+  end
 
     # Only allow a trusted parameter "white list" through.
-    def mood_params
+  def mood_params
       params.require(:mood).permit(:title, :food)
-    end
+  end
 end
