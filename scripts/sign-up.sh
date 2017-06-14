@@ -2,6 +2,9 @@
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/sign-up"
+EMAIL="hello"
+PASSWORD="hello"
+
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \

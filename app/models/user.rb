@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-class User < ProtectedController
+class User < ApplicationRecord
   include Authentication
+
   has_many :moods
 end
