@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20170620174646) do
 
   create_table "foods", force: :cascade do |t|
     t.string   "name",       null: false
-    t.integer  "_id"
+    t.integer  "user_id"
     t.string   "mood",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
