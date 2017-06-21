@@ -3,8 +3,8 @@ class FoodsController < ProtectedController
 
   # GET /foods
   def index
-    # @moods = Mood.all
-    @foods = current_user.foods.all
+    @foods = Food.all
+    # @foods = current_user.foods.all
 
     render json: @foods
   end
@@ -50,6 +50,6 @@ class FoodsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def food_params
-    params.require(:food).permit(:title, :food, :mood)
+    params.require(:mood).permit(:name, :_id)
   end
 end
