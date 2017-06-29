@@ -1,7 +1,6 @@
 class MoodsController < ProtectedController
   before_action :set_mood, only: [:show, :update, :destroy]
 
-
   # GET /moods
   def index
     # @moods = Mood.all
@@ -42,15 +41,14 @@ class MoodsController < ProtectedController
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_mood
+      # @mood = Mood.find(params[:id])
+      @mood = current_user.moods.find(params[:id])
+    end
 
-  # Use callbacks to share common setup or onstraints between actions.
-  def set_mood
-    # @mood = Mood.find(params[:id])
-    @mood = current_user.moods.find(params[:id])
-  end
-
-  # Only allow a trusted parameter "white list" through.
-  def mood_params
-    params.require(:mood).permit(:title, :food)
-  end
+    # Only allow a trusted parameter "white list" through.
+    def mood_params
+      params.require(:mood).permit(:emotion, :food, :user_id)
+    end
 end

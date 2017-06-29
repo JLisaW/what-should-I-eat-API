@@ -1,4 +1,4 @@
 class MoodSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :title, :food, :created_at
-  has_one :title
+  attributes :id, :emotion, :food, :user_id
+  has_one :emotion
 end
