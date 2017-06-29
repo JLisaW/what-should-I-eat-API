@@ -16,8 +16,8 @@ class FoodsController < ProtectedController
 
   # POST /foods
   def create
-    # @food = Food.new(food_params)
-    @food = current_user.foods.build(food_params)
+    @food = Food.new(food_params)
+    # @food = current_user.foods.build(food_params)
 
     if @food.save
       render json: @food, status: :created, location: @food
@@ -44,11 +44,11 @@ class FoodsController < ProtectedController
     # Use callbacks to share common setup or constraints between actions.
     def set_food
       # @food = Food.find(params[:id])
-      @mood = current_user.foods.find(params[:id])
+      @food = current_user.foods.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def food_params
-      params.require(:food).permit(:food_item, :emotion)
+      params.require(:food).permit(:food_id, :food_item, :emotion)
     end
 end
