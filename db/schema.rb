@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170628235344) do
   end
 
   create_table "moods", force: :cascade do |t|
-    t.string   "emotion"
+    t.string   "emotion",    null: false
     t.string   "food"
     t.integer  "user_id"
     t.datetime "created_at", null: false

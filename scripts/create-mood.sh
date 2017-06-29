@@ -2,7 +2,7 @@
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/moods"
-TOKEN="BAhJIiUzOGEzYTlkYTVmOWEwNTYwOGE2NGNmYWEyZWMzOTMzZgY6BkVG--8f0c94bd7a7f3145d0b6ddb316c4a1af92b2cd8f"
+TOKEN="BAhJIiU3MjU2OTM1NTBiZjExOTA2ZmExNzg2NDBlMTFkZmZmZQY6BkVG--a3eee75246fae11e47b618374bc2b4b5f595367d"
 TITLE="sad"
 FOOD="cookies"
 
@@ -13,7 +13,7 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
     "mood": {
-      "title": "'"${TITLE}"'",
+      "emotion": "'"${EMOTION}"'",
       "food": "'"${FOOD}"'"
     }
   }'
