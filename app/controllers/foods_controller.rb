@@ -16,8 +16,8 @@ class FoodsController < ProtectedController
 
   # POST /foods
   def create
-    @food = Food.new(food_params)
-    # @food = current_user.foods.build(food_params)
+    # @food = Food.new(food_params)
+    @food = current_user.food.build(food_params)
 
     if @food.save
       render json: @food, status: :created, location: @food

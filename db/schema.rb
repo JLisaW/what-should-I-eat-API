@@ -53,6 +53,6 @@ ActiveRecord::Schema.define(version: 20170628235344) do
   end
 
   add_foreign_key "examples", "users"
-  add_foreign_key "foods", "users"
-  add_foreign_key "moods", "users"
+  # add_foreign_key "foods", "users"
+  # add_foreign_key "moods", "users"
 end
