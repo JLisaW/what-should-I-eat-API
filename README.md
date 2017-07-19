@@ -20,13 +20,12 @@ API routes
 
 Technologies Used
 
-* Rails
-* Ruby
+* Ruby on Rails
 
 Process
 
-I started creating this app by creating user stories to help me determine the user experience I wanted.  I built the backend using Rails which helped me determine the relationships between I started by building the backend to help me determine the API single resource relationships.  I tested the CURL scrips to make sure my functions were running properly on Rails.  Then I started creating the front-end functionality using Javascript, Bootstrap, HTML, Handlebars.  I created a basic HTML/CSS for a visual of what I wanted the app to entail and test the functionalities I was going to create.  Finally I styled the application with CSS.
+I started creating this app by creating user stories to help me determine the user experience I wanted.  I built the back-end using Rails which helped me determine the relationships.  I started by building the backend to help me determine the API single resource relationships.  I tested the CURL scripts to make sure my functions were running properly on Rails.  Then I started creating the front-end functionality using Javascript, Bootstrap, HTML, Handlebars, and jQuery.  I created a basic HTML/CSS for a visual of what I wanted the app to entail and test the functionalities I was going to create.  Finally I styled the application with CSS.
 
 Unsolved Problems/Major Hurdles
 
-The purpose of this application is help users decide what he/she should eat to improve his/her mood. There is a generic moods and food list. The user would be able to create custom moods and foods they associate with the particular mood.  One unsolved problem I had is that I did not set my table to include a food ID which is why I could not "add food item" functionality. 
+The purpose of this application is help users decide what he/she should eat to improve his/her mood.  The user would be able to create custom moods and foods they associate with the particular mood.  One unsolved problem I had is that I did not set my table to include a food ID which is why I could not "add food item" functionality.
