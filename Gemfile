@@ -4,12 +4,13 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'active_model_serializers', '~> 0.10.0'
-gem "actionview", ">= 5.0.7.2"
+gem 'activejob', '>= 5.0.7.1'
+gem 'actionview', '>= 5.0.7.2'
 gem 'bcrypt', '~> 3.1.11'
 gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'rack-cors', require: 'rack/cors'
-gem "rack", ">= 2.0.6"
+gem 'rack', '>= 2.0.6'
 gem 'rails', '~> 5.0.1'
 
 group :development, :test do
